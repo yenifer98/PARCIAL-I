@@ -1,0 +1,188 @@
+ 
+
+
+
+%******************************************************************************************************
+%			
+%								Guía inicial para fundamentación en Ética
+%
+%******************************************************************************************************
+%==================================%=========================================
+
+\mag = 900
+
+\documentclass[letter,12pt,twoside]{book} 	%\documentclass{article}
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm, top=1cm, bottom=5cm}	%RE- IMPORTANTE macro para ubicar la geometría de TODA la HOJA
+
+\usepackage{lastpage}
+%\usepackage{lmodern}   
+%\usepackage[pangram]{blindtext} 
+\usepackage[T1]{fontenc}
+\usepackage{graphicx} 		%el entorno para insertar imágenes
+\usepackage{array}		%para la flecha de los vectores
+\usepackage{multirow}		%para manipular columnas en las tablas ... tabular 
+%\graphicspath{{./jpgs/}}
+\usepackage{fancyhdr}		%para los headers & footers
+\usepackage{enumitem}
+\usepackage{titlesec}
+%\usepackage[parfill]{parskip}
+\usepackage{multicol}
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+%==================================%
+%
+%			Variables iniciales, de conteo o 
+%
+
+\newcommand{\sectionbreak}{\clearpage}
+
+\setcounter{tocdepth}{6}
+\setcounter{secnumdepth}{6}
+\setcounter{chapter}{1}
+
+%==================================%
+%
+%		Header setting con imagen
+%
+%
+
+
+
+\pagestyle{fancy}
+       \fancyhf{} %Clear Everything. 
+\rhead{
+	\begin{picture}(0,0) 
+		\put(-49,2){\includegraphics[width=1.6cm] {0Univalle.jpeg}} 
+	\end{picture}
+	}
+	%a veces quitan la linea separadora del header y el cuerpo con....       \renewcommand{\headrule}{\hrule height 2pt \vspace{1mm}\hrule height 1pt} 
+   
+
+\setlength{\headheight}{3cm}	% Separar el header size para poder escribir allí - podría ser tambíen \setlength\headheight{2.50pt}
+\fancyhead[C]{\bf { 	República de Colombia - Zarzal - Universidad del Valle  \\ 
+				  Tecnología en electrónica - Algoritmia \& Programación\\ 
+				Martes 04 de Agosto, 2020 - Primer Parcial  \\ }
+			}
+ 
+ 
+%************************************************* 
+%			
+%		 	footer		   \fancyfoot
+%
+%************************************************* 
+ 
+
+ \renewcommand{\footrulewidth}{0.5pt}
+	\fancyfoot[RE,LO]{\it Algoritmia \& Programación}
+	\fancyfoot[LE,RO]{\thepage}
+	\cfoot{\thepage\ of \pageref{LastPage} }	%\fancyfoot[C]{\thepage} %Page Number
+
+
+%******************************************************************************************************
+%			
+%			
+%							 	Inicio del Documento
+%
+%			
+%******************************************************************************************************
+%			
+%
+%
+%			Aquí ya comienza el cuerpo
+%
+%
+
+\begin{document}
+
+\begin{flushright}
+{\it   "La mayoría de los buenos programadores programan, no porque esperan que se les pague o por adulación por parte del público, sino porque es divertido programar. 
+”}\\ 
+{\bf - Linus Torvalds   }
+\end{flushright}
+
+
+Buen día compatriota estudiante. Por favor lea las condiciones del presente parcial:
+
+\begin{enumerate}
+\item  {\it Entregue su parcial resuelto en LATEX (el archivo .TEX y el archivo .PDF generado)} 
+\item Debe entregarlo como la  {\bf actividad \#10 de CLASSROOM}
+\item No necesita subirlo al SITE pero si puede hacerlo, mejor.
+\end{enumerate}
+ 
+%\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+ 
+
+\noindent\rule{16.8cm}{0.4pt}
+
+\noindent
+\begin{enumerate}
+\item Consulte un Diagrama de Flujo donde se muestre un código que utilice un menú (el equivalente a SWITCH  en C) y una estructura de bucle para iteraciones bien sea WHILE, DO-WHILE o FOR. 
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item   Realice el pseudocódigo respectivo
+\item  Codifique en lenguaje C, el pseudocódigo anterior 
+\end{enumerate}    
+\end{multicols}
+
+\item Se tiene el  código en lenguaje C que el ingeniero P. Angarita explicó en clase. Recuerde que es la codificación del método de Newton (a veces llamado Newton - Raphson ). Obtenga el {\it Diagrama de Flujo de dicho código}
+\item Se deja caer una piedra en un pozo con altura  $ h_{k}$ y se escucha que tocó el fondo, a los $t_k$ segundos de haberse soltado la piedra.  {\it Repetido}
+
+\begin{enumerate}
+
+\begin{multicols}{2}
+\item Calcular la altura $t_{k}$ si $h_{k}= 5s$
+\item  Codifique en lenguaje C, el pseudocódigo anterior 
+
+\end{multicols}
+\end{enumerate}
+
+\item Consulte a los compañeros que realizaron la {\it tarea de manejo de archivos en C }, y realice un código que guarde los valores de altura ($h_{k}$ , $t_{k}$ ) en una arreglo vertical en un archivo de texto plano, del lejercicio anterior (Problema \# 3).
+
+\item Aplique el código en lenguaje C para obtener la inversa de  alguna matriz importante de su carrera. Para los electrónicos, puede emplear el ejecutable de inversa de una matriz para obtener la inversa de una matriz de coeficientes resistivos en un circuito de 3 mallas Para los industriales, puede empleaer una matriz . {\it Tarea de clase y avisado}
+\end{enumerate}    
+
+
+
+\begin{center}
+\centering
+\begin{tabular}{ |p{ 0.5 cm}||p{2 cm}|p{2 cm}|  }
+ \hline
+ \# & { $t_{k}$ <s>  } & { $h_{k}$ <m>}\\
+ \hline
+{  1} &  {  $t_{1}$   }  &   $h_{1}$    \\
+ \hline
+{  2}    & ...  & ... \\
+  \hline
+\end{tabular}
+\end{center}
+\ 
+
+ 
+\begin{flushright}
+{\it “-Toda la Escritura es inspirada por Dios y útil para enseñar, para redargüir, para corregir, para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra..”}\\ 
+{\bf  -2 Timoteo 3:16-17}
+\end{flushright}
+
+
+
+
+\end{document}
+
+
